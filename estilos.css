@@ -1,0 +1,131 @@
+body{
+    margin: 0;
+}
+
+header{
+    background: linear-gradient(90deg, rgb(61, 196, 250), rgb(243, 80, 216));
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px black solid;
+}
+
+#logo{
+    display: flex;
+    align-items: center;
+    padding-right: 30px;
+}
+
+#logo h1{
+    color:white;
+    font-size: max(20px, 2.5vw);
+    padding-top: 10px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    padding-right: 40px;
+}
+
+nav a{
+    padding-right: 20px;
+}
+
+#login-button{
+    padding:10px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(243, 80, 216);
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+#login-button:hover{
+    color:white;
+    background-color:rgb(243, 80, 216);
+    box-shadow: 0 0 10px white;
+    transition: .5s
+}
+
+#banner{
+    position: absolute;
+    z-index: 0;
+}
+
+#foto-perfil{
+    position: relative;
+    z-index: 1;
+    margin-left: 50px;
+    margin-top: 10%;
+    border-radius: 100%;
+    animation: alternate 1 linear 0.5s 4 normal forwards running;
+}
+
+div{
+    margin-bottom: 10px;
+    font-size: x-large;
+    font-weight: 1000;
+    font-family: monospace;
+}
+
+.logos-instituciones{
+    width: 60%;
+    min-width: 125px;
+}
+
+.row{
+    border-bottom: 1px solid lightgray;
+}
+
+.col-2, .col-3{
+    padding-top: 10px;
+    min-width: 200px;
+    text-align: center;
+    font-weight: 1000;
+    font-family: monospace;
+}
+
+.col-4{
+    padding-top: 10px;
+    text-align: center;
+}
+
+.col-8{
+    padding-top: 10px;
+    text-align: center;
+    font-weight: 1000;
+    font-family: monospace;
+}
+
+.col-9, .col-10{
+    padding-top: 10px;
+    text-align: left;
+    font-weight: 1000;
+    font-family: monospace;
+}
+
+.barra-gradiente{
+    background: linear-gradient(90deg, rgb(61, 196, 250), rgb(243, 80, 216));
+    margin-bottom: 20px;
+    padding-left: 20px;
+    width: 100%;
+    margin: 0px;
+}
+
+.progress{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.progress-bar{
+    background: linear-gradient(90deg, rgb(61, 196, 250), rgb(243, 80, 216));
+    height: 100%;
+}
+
+.estrella{
+    width: 4%;
+    min-width: 30px;
+}
