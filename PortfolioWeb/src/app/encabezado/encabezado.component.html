@@ -1,0 +1,16 @@
+<header>
+    <div id="logo">
+        <img src="https://res.cloudinary.com/dcaafyvnu/image/upload/v1682280329/APLogo-20-20_b1va7v.png" width="150px" alt="Logo de Argentina Programa">
+        <h1>#YoProgramo</h1>
+    </div>
+    <nav>
+        <a [href]="miPortfolio?.urlInstagram"><img src="https://res.cloudinary.com/dcaafyvnu/image/upload/v1682280329/logo-ig_m9jqvb.png" width="40px" style="float: right" alt="Instagram"></a>
+        <a [href]="'mailto:'+miPortfolio?.correo"><img src="https://res.cloudinary.com/dcaafyvnu/image/upload/v1682280330/logo-mail_h7airj.png" width="40px" style="float: right" alt="Email"></a>
+        <button class="login-button" (click)="logged ? onLogout() : onLogin()">{{ logged ? 'LOG OUT' : 'LOG IN' }}</button>
+    </nav>
+  </header>
+  <div>
+    <img [src]="miPortfolio?.urlBanner" id="banner" width="100%" alt="Banner">
+    <img [src]="miPortfolio?.urlFotoDePerfil" id="foto-perfil" width="20%" alt="Foto de perfil">
+  </div>
+  

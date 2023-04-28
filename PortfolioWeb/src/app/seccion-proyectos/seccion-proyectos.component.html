@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <div class="barra-gradiente">
+        PROYECTOS
+    </div>
+    
+    <div class="row" *ngFor="let proyecto of proyectosList">
+        <div class="col-3">
+            <h3>{{proyecto.nombre}}</h3>
+        </div>
+        <div class="col-9">
+            <h5>{{proyecto.descripcion}}</h5>
+            <a [href]="proyecto.linkVisualizacion">Ver</a>
+            <br>
+            <button class="botonBorrar" *ngIf="editando" (click)="borrar(proyecto.id)"> Borrar </button>
+        </div>
+    </div>
+  
+    <div class="row" name="divAgregar" *ngIf="!agregando&&editando" style="border-bottom: 0;">
+        <button class="botonAgregar" (click)="habilitarIngreso()">+</button>
+    </div>
+    <div class="row" name="divIngreso" *ngIf="agregando">
+        <div class="col-3">
+            <input type="text" id="nombreProyecto" placeholder="Nombre del proyecto" style="width: 100%;">
+        </div>
+        <div class="col-9">
+            <input type="text" id="descripcion" placeholder="Descripción" style="width: 100%;">
+            <input type="text" id="link" placeholder="Link a visualización" style="width: 100%;">
+        </div>
+    </div>
+    <button class="botonEditar" *ngIf="agregando" (click)="agregarProyecto()" style="width:100%; display:inline;">Guardar</button>
+
+  </div>

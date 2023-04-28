@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <div class="barra-gradiente">
+        EXPERIENCIA
+    </div>
+  
+    <div class="row" *ngFor="let experiencia of experienciasList">
+        <div class="col-2">
+            <img class="logos-instituciones" [src]="experiencia.urlLogo" width="80%" alt="Logo">
+        </div>
+        <div class="col-8">
+            <h4><strong>{{experiencia.nombre}}</strong></h4>
+            <h5>{{experiencia.fechaInicio}} - {{experiencia.fechaFin}}</h5>
+            <p>{{experiencia.descripcion}}</p>
+            <button class="botonBorrar" *ngIf="editando" (click)="borrar(experiencia.id)">Borrar</button>
+        </div>
+    </div>
+  
+    <div class="row" name="divAgregar" *ngIf="!agregando&&editando" style="border-bottom: 0;">
+        <button class="botonAgregar" (click)="habilitarIngreso()">+</button>
+    </div>
+    <div class="row" name="divIngreso" *ngIf="agregando" style="border-bottom: none;">
+        <div class="col-2">
+            <input type="text" id="srcLogo" placeholder="Dirección de Logo">
+        </div>
+        <div class="col-8">
+            <input type="text" id="titulo" placeholder="Título" style="width: 100%;">
+            <input type="date" id="fechaInicio"> - <input type="date" id="fechaFin">
+            <input type="text" id="descripcion" placeholder="Descripción" style="width: 100%;">
+        </div>
+    </div>
+    <button class="botonEditar" *ngIf="agregando" (click)="agregarExperiencia()" style="width:100%;display:inline;">Guardar</button>
+
+  </div>
