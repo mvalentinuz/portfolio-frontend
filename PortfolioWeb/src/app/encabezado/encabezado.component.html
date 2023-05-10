@@ -13,4 +13,14 @@
     <img [src]="miPortfolio?.urlBanner" id="banner" width="100%" alt="Banner">
     <img [src]="miPortfolio?.urlFotoDePerfil" id="foto-perfil" width="20%" alt="Foto de perfil">
   </div>
+  <div class="row" *ngIf="agregando">
+    <input type="text" id="urlFotoDePerfil" placeholder="Ingrese URL de su foto de perfil" style="width: 100%;">
+    <input type="text" id="urlBanner" placeholder="Ingrese URL de su imagen de portada" style="width: 100%;">
+    <input type="text" id="correo" placeholder="Ingrese su email" style="width: 100%;">
+    <input type="text" id="linkIG" placeholder="Ingrese link a su perfil de Instagram" style="width: 100%;">
+    <button class="botonEditar" *ngIf="agregando" (click)="cambiarInformacionEncabezado()" style="width:100%; display:inline;">Guardar</button>
+  </div>
+  <div class="row" name="divAgregar" *ngIf="!agregando&&logged" style="border-bottom: 0;">
+    <button class="botonAgregar" (click)="habilitarIngreso()">Editar imágenes y contactos</button>
+  </div>
   

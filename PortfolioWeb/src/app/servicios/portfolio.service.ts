@@ -78,6 +78,10 @@ export class PortfolioService {
     );
   }
 
+  editarInformacionPersonal(infopersonal:any){
+    return this.http.patch(`http://localhost:8080/edit/infopersonal`,infopersonal)
+  }
+
   toggleEdition(check:boolean){
     this.editando=check;
   }

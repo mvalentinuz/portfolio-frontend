@@ -1,6 +1,6 @@
 
 <div class="container-fluid">
-    <div class="row">
+    <div class="row" *ngIf="!agregando">
         <div class="col-4" >
             <h2><strong>{{miPortfolio?.nombre}} {{miPortfolio?.apellido}}</strong></h2>
             <h3>{{miPortfolio?.profesion}}</h3>
@@ -12,4 +12,21 @@
             <p name="informacion">{{miPortfolio?.descripcion}}</p>
         </div>
     </div>
-  </div>
+    <div class="row" *ngIf="agregando">
+        <div class="col-4" >
+            <input type="text" id="nombre" placeholder="Nombre" style="width: 50%;">
+            <input type="text" id="apellido" placeholder="Apellido" style="width: 50%;">
+            <input type="text" id="profesion" placeholder="Profesión" style="width: 100%;">
+        </div>
+        <div class="col-8" style="text-align: left;">
+            <div class="barra-gradiente">
+                INFORMACIÓN PROFESIONAL
+            </div>
+            <input type="text" id="descripcion" placeholder="Breve descripción de perfil profesional" style="width: 100%;">
+        </div>
+    </div>
+    <div class="row" name="divAgregar" *ngIf="!agregando&&editando" style="border-bottom: 0;">
+        <button class="botonAgregar" (click)="habilitarIngreso()">Editar información personal</button>
+    </div>
+    <button class="botonEditar" *ngIf="agregando" (click)="cambiarInfoPersonal()" style="width:100%; display:inline;">Guardar</button>
+</div>
